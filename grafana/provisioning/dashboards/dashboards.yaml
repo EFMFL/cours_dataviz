@@ -1,0 +1,9 @@
+apiVersion: 1
+
+providers:
+  - name: cours-dataviz
+    folder: Cours Visualisation de données
+    type: file
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/provisioning/dashboards

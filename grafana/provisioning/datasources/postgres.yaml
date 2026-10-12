@@ -1,0 +1,17 @@
+apiVersion: 1
+
+datasources:
+  - name: NYC Taxi (PostgreSQL)
+    uid: pg-nyctaxi
+    type: grafana-postgresql-datasource
+    access: proxy
+    url: postgres:5432
+    user: ${PG_USER}
+    isDefault: true
+    jsonData:
+      database: ${PG_DB}
+      sslmode: disable
+      postgresVersion: 1600
+      timescaledb: false
+    secureJsonData:
+      password: ${PG_PASSWORD}
